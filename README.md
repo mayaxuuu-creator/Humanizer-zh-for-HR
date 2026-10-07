@@ -1,4 +1,36 @@
-# Humanizer-zh：中文文本润色 Skill
+# Humanizer-zh for HR：HR 与经营文本去 AI 味 Skill
+
+> 本仓库是 [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)（MIT）的 HR 定制 fork。在通用中文去 AI 味能力之上，为 HR 与经营文本（经营诊断、项目复盘、组织分析、人才盘点、PPT 大纲与讲稿、企业文化、培训材料）增加语域控制和专用规则。
+
+## 本 fork 新增
+
+| 文件 | 内容 |
+|---|---|
+| `SKILL.md` 章节「HR 与经营文本附加规则」 | 改写 HR 文本的叠加流程：先定语域 → 对照黑名单 → 对照 before/after → 缺细节不编造 |
+| [hr/register.md](hr/register.md) | 7 个 HR 场景的正式度表 + 改完自问的语域校验问题 |
+| [hr/blacklist.md](hr/blacklist.md) | HR 经营文本词级/结构级黑名单，附白名单（真实经营文本的标志，防止误伤） |
+| [hr/before-after.md](hr/before-after.md) | 9 组覆盖主要 HR 产出场景的改写对照 |
+
+### 安装（本 fork）
+
+```bash
+git clone https://github.com/mayaxuuu-creator/Humanizer-zh-for-HR.git ~/.claude/skills/humanizer-zh-for-hr
+```
+
+技能名为 `humanizer-zh-for-hr`，可与上游 `humanizer-zh` 共存。
+
+### 使用（HR 场景）
+
+```text
+请用 humanizer-zh-for-hr 按经营诊断语域润色下面的复盘报告：
+[原文]
+```
+
+改写方向：动词开头给判断、具体到人/数/时间、结论带例外、分工点名。完整示例见 [hr/before-after.md](hr/before-after.md)。
+
+---
+
+以下为上游原文档（其中安装命令的仓库地址以上游 op7418/Humanizer-zh 为准）。
 
 编辑已有文章、评论和文档中的空话、重复及模板化表达，保留事实、确定程度和作者声音。输入是一段文字或一个文件，默认输出最终改写稿；没有问题的句子可以不改。
 
